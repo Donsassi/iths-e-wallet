@@ -7,7 +7,16 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    cards: []
+    is_selected:false,
+    cards: [],
+    selectedCard:{
+      index:-1,
+      number:'6666 6666 6666 6666',
+      username:'Christoffer Wallenberg',
+      date1:'03',
+      date2:'21',
+      card_type:'evil'
+    }
   },
  
 })

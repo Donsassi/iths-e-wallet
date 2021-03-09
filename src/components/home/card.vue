@@ -1,5 +1,8 @@
 <template>
-     <article class="card " :class="card_type">
+     <article class="card Selectcard" :class="card_type"
+      @mouseover="hover = true"
+      @mouseleave="hover = false"
+     >
         <header>
           <!---->
           <img
@@ -26,9 +29,7 @@
         src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNSAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuNTg1MTkgNy4xNDY0NkwyLjY2ODQzIDYuMzk0NzlDMS42OTEyNiA2LjAxODk2IDEuMjQwMjUgNC45MjkwNCAxLjYxNjA5IDMuOTUxODZDMS45OTE5MiAyLjk3NDY5IDMuMDgxODUgMi41MjM2OSA0LjA1OTAyIDIuODk5NTJMNS4wMzYxOSAzLjI3NTM2TDQuNzczMTEgMi40MTA5NEM0LjQ3MjQ0IDEuNDMzNzcgNS4wMzYxOSAwLjM4MTQyNiA2LjA1MDk1IDAuMDgwNzU4QzcuMDI4MTIgLTAuMjE5OTEgOC4wODA0NiAwLjM0Mzg0MyA4LjM4MTEzIDEuMzU4Nkw5LjA1NzYzIDMuNjUxMTlDMTEuNDYzIDIuNDQ4NTIgMTQuMTY5IDEuNzM0NDMgMTcuMDI1MyAxLjczNDQzQzI2LjQyMTIgMS43MzQ0MyAzNC4wNTA3IDkuMzYzODkgMzQuMDUwNyAxOC43NTk4QzM0LjA1MDcgMjguMTU1NyAyNi40MjEyIDM1Ljc4NTEgMTcuMDI1MyAzNS43ODUxQzcuNjI5NDYgMzUuNzg1MSAtMy44MTQ3ZS0wNiAyOC4xNTU3IC0zLjgxNDdlLTA2IDE4Ljc1OThDLTMuODE0N2UtMDYgMTQuMjg3MyAxLjc2NjQyIDEwLjE5MDcgNC41ODUxOSA3LjE0NjQ2Wk0yOS4wMTQ1IDE5LjkyNDlDMjkuMDUyMSAxOS41NDkgMjkuMDg5NyAxOS4xNzMyIDI5LjA4OTcgMTguNzU5OEMyOS4wODk3IDE1Ljg2NTggMjguMDc0OSAxMy4yMzUgMjYuMzgzNiAxMS4xNjc5SDcuNzQyMjFDNi4wNTA5NSAxMy4yMzUgNS4wMzYxOSAxNS45MDM0IDUuMDM2MTkgMTguNzU5OEM1LjAzNjE5IDE5LjEzNTYgNS4wNzM3OCAxOS41NDkgNS4xMTEzNiAxOS45MjQ5SDI5LjAxNDVaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMjEuOTQ4OCAxOC4xMjA5QzIwLjUxNjYgMTguMTIwOSAxOS4zNTU1IDE2Ljk1OTggMTkuMzU1NSAxNS41Mjc2QzE5LjM1NTUgMTQuMDk1NCAyMC41MTY2IDEyLjkzNDMgMjEuOTQ4OCAxMi45MzQzQzIzLjM4MSAxMi45MzQzIDI0LjU0MjEgMTQuMDk1NCAyNC41NDIxIDE1LjUyNzZDMjQuNTQyMSAxNi45NTk4IDIzLjM4MSAxOC4xMjA5IDIxLjk0ODggMTguMTIwOVoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xMi4xMDE5IDE4LjEyMDlDMTAuNjY5NyAxOC4xMjA5IDkuNTA4NjYgMTYuOTU5OCA5LjUwODY2IDE1LjUyNzZDOS41MDg2NiAxNC4wOTU0IDEwLjY2OTcgMTIuOTM0MyAxMi4xMDE5IDEyLjkzNDNDMTMuNTM0MSAxMi45MzQzIDE0LjY5NTIgMTQuMDk1NCAxNC42OTUyIDE1LjUyNzZDMTQuNjk1MiAxNi45NTk4IDEzLjUzNDEgMTguMTIwOSAxMi4xMDE5IDE4LjEyMDlaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K"
         alt="Ninja Bank"
       />
-          <!---->
-          <!---->
-          <!---->
+        
         </header>
         <section class="number">{{number}}</section>
         <section class="info">
@@ -48,6 +49,11 @@
 
 <script>
 export default {
+  data(){
+    return{
+      hover:false,
+    }
+  },
     props:{
         number:{
             type:String,
@@ -75,3 +81,12 @@ export default {
     }
 }
 </script>
+
+
+<style scoped>
+
+  .Selectcard:hover{
+    border: 3px solid red;
+    cursor: pointer;
+  }
+</style>

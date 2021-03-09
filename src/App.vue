@@ -234,5 +234,4 @@ select {
 .col-2 {
   grid-column: auto/span 2;
 }
-/*# sourceMappingURL=app.4557fb8f18dc7b8b848159750b779d70.css.map */
 </style>
